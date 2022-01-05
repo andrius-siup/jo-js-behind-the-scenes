@@ -18,3 +18,9 @@ const firstName = 'Andrius';
 calcAge(1985);
 
 // console.log(calcAge(1985));
+
+// Error - cause 'age' is local variable in calcAge function
+// console.log(age);
+
+// Error - cannot access to the child function
+// printAge();
