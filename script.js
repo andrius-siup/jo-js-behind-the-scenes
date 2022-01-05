@@ -55,3 +55,18 @@ console.log(me);
 var me = 'Andrius';
 let job = 'coder';
 const year = 1985;
+
+// Functions
+console.log(addDecl(2, 3)); // Able to call before declaration
+console.log(addExpr(2, 3)); // Cause variable const addExpr in TDZ
+console.log(addArrow(2, 3)); // Variable in TDZ - temp-death-zone
+
+function addDecl(a, b) {
+  return a + b;
+}
+
+const addExpr = function (a, b) {
+  return a + b;
+};
+
+const addArrow = (a, b) => a + b;
