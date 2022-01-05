@@ -13,6 +13,8 @@ function calcAge(birthYear) {
       const str = `Oh, and you're a millenial, ${firstName}`;
       console.log(str);
     }
+    // Error - cause const and let variables are block scope
+    console.log(str);
   }
   printAge(); // Have to call in parent function
 
