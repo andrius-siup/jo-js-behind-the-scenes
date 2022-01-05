@@ -13,10 +13,16 @@ function calcAge(birthYear) {
       var millenial = true;
       const str = `Oh, and you're a millenial, ${firstName}`;
       console.log(str);
+
+      function add(a, b) {
+        return a + b;
+      }
     }
     // Error - cause const and let variables are block scope
     // console.log(str);
     console.log(millenial);
+    // Error - function outside the block scope - only inside block
+    add(2, 3);
   }
   printAge(); // Have to call in parent function
 
