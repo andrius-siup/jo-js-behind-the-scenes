@@ -57,9 +57,13 @@ let job = 'coder';
 const year = 1985;
 
 // Functions
-console.log(addDecl(2, 3)); // Able to call before declaration
-console.log(addExpr(2, 3)); // Cause variable const addExpr in TDZ
-console.log(addArrow(2, 3)); // Variable in TDZ - temp-death-zone
+// Able to call before declaration
+console.log(addDecl(2, 3));
+// Cause variable const addExpr in TDZ
+// console.log(addExpr(2, 3));
+// Variable in TDZ - temp-death-zone
+// console.log(addArrow(2, 3));
+console.log(addArrow);
 
 function addDecl(a, b) {
   return a + b;
@@ -69,4 +73,14 @@ const addExpr = function (a, b) {
   return a + b;
 };
 
-const addArrow = (a, b) => a + b;
+var addArrow = (a, b) => a + b;
+
+// Example
+console.log(numPtroducts);
+if (!numPtroducts) deleteShoppingCart();
+
+var numPtroducts = 10;
+
+function deleteShoppingCart() {
+  console.log('All products deleted!');
+}
