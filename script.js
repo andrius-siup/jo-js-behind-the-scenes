@@ -10,11 +10,13 @@ function calcAge(birthYear) {
     console.log(output);
 
     if (birthYear >= 1981 && birthYear <= 1996) {
+      var millenial = true;
       const str = `Oh, and you're a millenial, ${firstName}`;
       console.log(str);
     }
     // Error - cause const and let variables are block scope
-    console.log(str);
+    // console.log(str);
+    console.log(millenial);
   }
   printAge(); // Have to call in parent function
 
