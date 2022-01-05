@@ -76,7 +76,7 @@ const addExpr = function (a, b) {
 
 var addArrow = (a, b) => a + b;
 */
-
+/*
 // Example
 const numProducts = 10;
 
@@ -87,3 +87,13 @@ function deleteShoppingCart() {
 console.log(numProducts);
 
 if (!numProducts) deleteShoppingCart();
+*/
+
+var x = 1;
+let y = 2; // have to be var to able to see in window object
+const z = 3; // have to be var to able to see in window object
+
+// Only x now able to see in console typed window (window object)
+console.log(x === window.x); // true
+console.log(y === window.y); // false
+console.log(z === window.z); // false
