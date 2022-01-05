@@ -47,6 +47,7 @@ calcAge(1985);
 // printAge();
 */
 
+/*
 // variables
 console.log(me);
 // console.log(job);
@@ -74,13 +75,15 @@ const addExpr = function (a, b) {
 };
 
 var addArrow = (a, b) => a + b;
+*/
 
 // Example
-console.log(numPtroducts);
-if (!numPtroducts) deleteShoppingCart();
-
-var numPtroducts = 10;
+const numProducts = 10;
 
 function deleteShoppingCart() {
   console.log('All products deleted!');
 }
+
+console.log(numProducts);
+
+if (!numProducts) deleteShoppingCart();
