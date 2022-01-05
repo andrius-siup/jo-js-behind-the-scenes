@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 function calcAge(birthYear) {
   const age = 2037 - birthYear;
   // The firstName is global variable and can be executed in function
@@ -45,3 +45,13 @@ calcAge(1985);
 
 // Error - cannot access to the child function
 // printAge();
+*/
+
+// variables
+console.log(me);
+// console.log(job);
+// console.log(year);
+
+var me = 'Andrius';
+let job = 'coder';
+const year = 1985;
