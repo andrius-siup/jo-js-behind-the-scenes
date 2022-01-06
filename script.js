@@ -188,6 +188,7 @@ var addArrow = (a, b) => {
 addArrow(2, 6, 8);
 */
 
+/*
 let age = 30;
 let oldAge = age;
 age = 31;
@@ -205,3 +206,20 @@ friend.age = 27; // here are pointed both at same age value of 27
 
 console.log('Friend', friend);
 console.log('Me', me);
+*/
+
+let lastName = 'Williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+console.log(lastName, oldLastName);
+
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+// both variables point to the same object
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+console.log('Before marriage: ', jessica);
+console.log('After marriage: ', marriedJessica);
