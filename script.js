@@ -135,6 +135,7 @@ const f = andrius.calcAge;
 f(); // undefined
 */
 
+/*
 // Avoid use 'var' and arrow function
 // var firstName = 'Matilda';
 
@@ -167,3 +168,14 @@ const andrius = {
 };
 andrius.greet();
 andrius.calcAge();
+*/
+
+// Arguments keyword
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+addExpr(2, 5);
+addExpr(2, 5, 8, 12);
+
+var addArrow = (a, b) => a + b;
