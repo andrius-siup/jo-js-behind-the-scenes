@@ -154,7 +154,7 @@ const andrius = {
 
     // SOLUTION 2
     const isMillenial = () => {
-      console.log(self); // easy checked - is undefined
+      console.log(this);
       console.log(this.year >= 1981 && this.year <= 1996);
     };
     isMillenial();
