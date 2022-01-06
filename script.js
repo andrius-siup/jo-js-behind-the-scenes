@@ -207,12 +207,13 @@ friend.age = 27; // here are pointed both at same age value of 27
 console.log('Friend', friend);
 console.log('Me', me);
 */
-
+// Primitive types
 let lastName = 'Williams';
 let oldLastName = lastName;
 lastName = 'Davis';
 console.log(lastName, oldLastName);
 
+// Reference types
 const jessica = {
   firstName: 'Jessica',
   lastName: 'Williams',
@@ -223,3 +224,17 @@ const marriedJessica = jessica;
 marriedJessica.lastName = 'Davis';
 console.log('Before marriage: ', jessica);
 console.log('After marriage: ', marriedJessica);
+
+// Copying objects
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+
+// Copy jessica2 obj and store into empty object
+const jessicaCopy = Object.assign({}, jessica2);
+// Change object reference value
+jessicaCopy.lastName = 'Davis';
+console.log('Before marriage: ', jessica2);
+console.log('After marriage: ', jessicaCopy);
