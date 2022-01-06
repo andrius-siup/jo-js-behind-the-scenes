@@ -135,7 +135,8 @@ const f = andrius.calcAge;
 f(); // undefined
 */
 
-var firstName = 'Matilda';
+// Avoid use 'var' and arrow function
+// var firstName = 'Matilda';
 
 const andrius = {
   firstName: 'Andrius',
@@ -145,7 +146,9 @@ const andrius = {
     console.log(2037 - this.year);
   },
 
-  greet: () => console.log(`Hey ${this.firstName}`),
+  greet: function () {
+    console.log(`Hey ${this.firstName}`);
+  },
 };
 andrius.greet();
 andrius.calcAge();
