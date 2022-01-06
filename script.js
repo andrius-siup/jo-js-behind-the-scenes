@@ -135,6 +135,8 @@ const f = andrius.calcAge;
 f(); // undefined
 */
 
+var firstName = 'Matilda';
+
 const andrius = {
   firstName: 'Andrius',
   year: 1985,
@@ -144,8 +146,6 @@ const andrius = {
   },
 
   greet: () => console.log(`Hey ${this.firstName}`),
-  greet2: () => console.log(2037 - this.year), // NaN
 };
-andrius.greet(); // undefined, cause arrow function is global funct
+andrius.greet();
 andrius.calcAge();
-andrius.greet2(); // NaN
