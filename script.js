@@ -178,4 +178,9 @@ const addExpr = function (a, b) {
 addExpr(2, 5);
 addExpr(2, 5, 8, 12);
 
-var addArrow = (a, b) => a + b;
+var addArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+
+addArrow(2, 6, 8);
