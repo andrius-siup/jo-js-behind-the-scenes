@@ -88,7 +88,7 @@ console.log(numProducts);
 
 if (!numProducts) deleteShoppingCart();
 */
-
+/*
 var x = 1;
 let y = 2; // have to be var to able to see in window object
 const z = 3; // have to be var to able to see in window object
@@ -97,3 +97,38 @@ const z = 3; // have to be var to able to see in window object
 console.log(x === window.x); // true
 console.log(y === window.y); // false
 console.log(z === window.z); // false
+*/
+
+console.log(this);
+
+const calcAge = function (birthYear) {
+  console.log(2037 - birthYear);
+  console.log(this); // undefined
+};
+
+calcAge(1985);
+
+const calcAgeArrow = birthYear => {
+  console.log(2037 - birthYear);
+  console.log(this); // window object
+};
+calcAgeArrow(1990);
+
+const andrius = {
+  year: 1985,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year); // same as andrius.year
+  },
+};
+andrius.calcAge();
+
+const matilda = {
+  year: 2017,
+};
+// 'this' keyword pointed to the matilda object
+matilda.calcAge = andrius.calcAge;
+matilda.calcAge();
+
+const f = andrius.calcAge;
+f(); // undefined
