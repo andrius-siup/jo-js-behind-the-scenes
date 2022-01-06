@@ -146,12 +146,16 @@ const andrius = {
     console.log(2037 - this.year);
 
     // SOLUTION 1
+    // const self = this; // self of that
+    // const isMillenial = function () {
+    //   console.log(self); // easy checked - is undefined
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    // };
 
-    const self = this; // self of that
-    const isMillenial = function () {
+    // SOLUTION 2
+    const isMillenial = () => {
       console.log(self); // easy checked - is undefined
-      // console.log(this.year >= 1981 && this.year <= 1996);
-      console.log(self.year >= 1981 && self.year <= 1996);
+      console.log(this.year >= 1981 && this.year <= 1996);
     };
     isMillenial();
   },
