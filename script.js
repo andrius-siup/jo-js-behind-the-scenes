@@ -170,6 +170,7 @@ andrius.greet();
 andrius.calcAge();
 */
 
+/*
 // Arguments keyword
 const addExpr = function (a, b) {
   console.log(arguments);
@@ -178,9 +179,29 @@ const addExpr = function (a, b) {
 addExpr(2, 5);
 addExpr(2, 5, 8, 12);
 
+// Keyword 'arguments' not allowed in arrow functions - error
 var addArrow = (a, b) => {
   console.log(arguments);
   return a + b;
 };
 
 addArrow(2, 6, 8);
+*/
+
+let age = 30;
+let oldAge = age;
+age = 31;
+
+console.log(age);
+console.log(oldAge); // not effected reassigned variable
+
+const me = {
+  name: 'Andrius',
+  age: 30,
+};
+
+const friend = me; // pointed at the same object
+friend.age = 27; // here are pointed both at same age value of 27
+
+console.log('Friend', friend);
+console.log('Me', me);
