@@ -99,6 +99,7 @@ console.log(y === window.y); // false
 console.log(z === window.z); // false
 */
 
+/*
 console.log(this);
 
 const calcAge = function (birthYear) {
@@ -132,3 +133,19 @@ matilda.calcAge();
 
 const f = andrius.calcAge;
 f(); // undefined
+*/
+
+const andrius = {
+  firstName: 'Andrius',
+  year: 1985,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+
+  greet: () => console.log(`Hey ${this.firstName}`),
+  greet2: () => console.log(2037 - this.year), // NaN
+};
+andrius.greet(); // undefined, cause arrow function is global funct
+andrius.calcAge();
+andrius.greet2(); // NaN
