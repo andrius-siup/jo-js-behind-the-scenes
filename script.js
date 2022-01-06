@@ -142,11 +142,18 @@ const andrius = {
   firstName: 'Andrius',
   year: 1985,
   calcAge: function () {
-    console.log(this);
+    // console.log(this);
     console.log(2037 - this.year);
+
+    const isMillenial = function () {
+      console.log(this); // easy checked - is undefined
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
   },
 
-  greet: function () {
+  greet: () => {
+    console.log(this);
     console.log(`Hey ${this.firstName}`);
   },
 };
