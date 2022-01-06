@@ -230,11 +230,16 @@ const jessica2 = {
   firstName: 'Jessica',
   lastName: 'Williams',
   age: 27,
+  family: ['Alice', 'Bob'],
 };
 
 // Copy jessica2 obj and store into empty object
 const jessicaCopy = Object.assign({}, jessica2);
 // Change object reference value
 jessicaCopy.lastName = 'Davis';
+
+jessicaCopy.family.push('Mary');
+jessicaCopy.family.push('John');
+
 console.log('Before marriage: ', jessica2);
 console.log('After marriage: ', jessicaCopy);
